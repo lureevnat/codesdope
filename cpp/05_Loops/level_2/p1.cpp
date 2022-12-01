@@ -8,10 +8,25 @@ using namespace std;
 
 int main()
 {
-    int a, b;
+    int a, b, rem, c, d;
     cout << "Enter a and b:";
     cin >> a >> b;
+    c = a;
+    d = b;
+    if (a < b)
+    {
+        rem = a; // rem is used as temp var
+        a = b;
+        b = rem;
+    }
 
-    cout << "a/b in lowest terms: " << a << "/" << b << endl;
+    while (b)
+    {
+        rem = a % b;
+        a = b;
+        b = rem;
+    }
+
+    cout << "The a/b in its lowest form is " << c / a << "/" << d / a;
     return 0;
 }
