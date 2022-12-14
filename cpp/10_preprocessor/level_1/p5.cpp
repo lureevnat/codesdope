@@ -11,4 +11,4 @@ int main()
 {
     cout << simple_interest(1000, 12, 3) << "\n";
     return 0;
-}
+} 
